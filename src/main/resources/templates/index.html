@@ -42,17 +42,17 @@
 <hr/>
 
 <h1>Create user</h1>
-<form th:method="post" th:action="@{/adduser}">
+<form th:method="post" th:action="@{/adduser}" th:object="${user}">
     <label>
-        First name: <input type="text" th:field="*{user.name}">
+        First name: <input type="text" th:field="*{name}">
     </label>
     </br>
     <label>
-        Last name: <input type="text" th:field="*{user.surname}">
+        Last name: <input type="text" th:field="*{surname}">
     </label>
     </br>
     <label>
-        Old: <input type="text" th:field="*{user.old}">
+        Old: <input type="text" th:field="*{old}">
     </label>
     </br>
     <input type="submit">
